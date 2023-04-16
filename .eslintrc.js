@@ -15,7 +15,9 @@ module.exports = {
     sourceType: 'module'
   },
   plugins: [
-    'react'
+    'react',
+    '@typescript-eslint',
+    'prettier'
   ],
   rules: {
     '@typescript-eslint/dot-notation': ['off'],
