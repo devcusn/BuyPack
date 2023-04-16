@@ -1,8 +1,14 @@
 .productCard {
   display: flex;
-  padding: 0px !important;
-  width: 500xp;
+  background-color: #f2f2f2;
+  width: 49%;
   img {
     height: 150px;
   }
+}
+.productCardContent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 8px;
 }

@@ -1,12 +1,16 @@
 .productList {
+  display: flex;
+  flex-direction: column;
   width: 70%;
+  background-color: #ffffff;
   height: 80vh;
   padding: 34px;
 }
 .products {
   display: flex;
+  height: 100%;
   flex-wrap: wrap;
   gap: 12px;
-  min-height: 100%;
   overflow-y: auto;
+  padding: 20px;
 }

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Button, Card, Divider, Typography } from 'antd'
+import { Button, Divider, Typography } from 'antd'
 
 import Layout from 'layout/Layout'
 import { getProducts } from 'services/mock-api/product/endpoints'
@@ -41,7 +41,7 @@ const ProductsPage: React.FunctionComponent = () => {
           height: '100%'
         }}
       >
-        <Card className={styles.productList}>
+        <div className={styles.productList}>
           <div className={styles.products}>
             {products &&
               products.map((product) => (
@@ -62,7 +62,7 @@ const ProductsPage: React.FunctionComponent = () => {
               Go To Pay
             </Button>
           </div>
-        </Card>
+        </div>
       </div>
     </Layout>
   )
