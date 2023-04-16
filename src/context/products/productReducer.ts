@@ -4,7 +4,7 @@ const initialState: { products: Array<ProductModel> } = {
   products: []
 }
 
-export const producReducer = (
+export const productsReducer = (
   state = initialState,
   action: { payload: ProductModel; type: string }
 ) => {
