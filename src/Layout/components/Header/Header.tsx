@@ -5,8 +5,11 @@ import Logo from 'app/assets/logo/logo.svg'
 
 import styles from './Header.module.scss'
 import { UserOutlined } from '@ant-design/icons'
+import { connect } from 'react-redux'
 
-const Header: React.FunctionComponent = () => {
+import { HeaderProps } from './types'
+
+const Header: React.FunctionComponent<HeaderProps> = (props) => {
   return (
     <div className={styles.header}>
       <div className={styles.logo}>
@@ -17,9 +20,15 @@ const Header: React.FunctionComponent = () => {
       <div style={{ width: '100%' }}></div>
       <div className={styles.menu}>
         <UserOutlined />
-        hello
+        {props?.userName}
       </div>
     </div>
   )
 }
-export default Header
+
+const mapStateToProps = (state: any) => {
+  return {
+    userName: state.userName
+  }
+}
+export default connect(mapStateToProps)(Header)

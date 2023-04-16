@@ -1,4 +1,5 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
 import { Button, Card, Form, Input, Typography } from 'antd'
 import { MailOutlined, UserOutlined } from '@ant-design/icons'
 
@@ -6,12 +7,14 @@ import Layout from 'layout/Layout'
 import { auth } from 'services/mock-api/auth/endpoints'
 import { useNavigate } from 'react-router-dom'
 import useNotify from 'app/hooks/Notify'
+import { setUserName } from 'context/user/userActions'
 
 const { Title } = Typography
 
 const LoginPage: React.FunctionComponent = () => {
   const [form] = Form.useForm()
   const navigate = useNavigate()
+  const dispatch = useDispatch()
   const { notify } = useNotify()
 
   const loginHandler = async (values: { FullName: string; email: string }) => {
@@ -19,6 +22,7 @@ const LoginPage: React.FunctionComponent = () => {
     if (response) {
       notify({ message: 'Successfully Login' })
       navigate('/products')
+      dispatch(setUserName(values.FullName))
     }
   }
 

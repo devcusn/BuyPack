@@ -4,16 +4,19 @@ import RouterProvider from 'bootstrap/Router/RouterProvider'
 import Provider from 'bootstrap/Provider'
 import Guard from 'bootstrap/Guard/GuardProvider'
 import Auth from 'bootstrap/Guard/AuthProvider'
+import Context from 'bootstrap/Context/Context'
 
 const App: React.FunctionComponent = () => {
   return (
-    <Provider>
-      <Guard>
-        <Auth>
-          <RouterProvider />
-        </Auth>
-      </Guard>
-    </Provider>
+    <Context>
+      <Provider>
+        <Guard>
+          <Auth>
+            <RouterProvider />
+          </Auth>
+        </Guard>
+      </Provider>
+    </Context>
   )
 }
 
