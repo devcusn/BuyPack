@@ -20,7 +20,7 @@ const Header: React.FunctionComponent<HeaderProps> = (props) => {
       <div style={{ width: '100%' }}></div>
       <div className={styles.menu}>
         <UserOutlined />
-        {props?.userName}
+        {props?.userName || 'default name'}
       </div>
     </div>
   )
