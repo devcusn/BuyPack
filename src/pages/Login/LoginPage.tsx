@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button, Card, Form, Input, Typography } from 'antd'
+import { MailOutlined, UserOutlined } from '@ant-design/icons'
 
 import Layout from 'Layout/Layout'
 
@@ -7,7 +8,7 @@ const { Title } = Typography
 
 const LoginPage: React.FunctionComponent = () => {
   return (
-    <Layout>
+    <Layout isHeader={false}>
       <div
         style={{
           display: 'flex',
@@ -20,17 +21,22 @@ const LoginPage: React.FunctionComponent = () => {
           <Title level={3} style={{ textAlign: 'center' }}>
             Log In
           </Title>
+
           <Form
             style={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '8px',
               width: '400px'
             }}
+            layout="vertical"
           >
-            <Input placeholder="username" />
-            <Input placeholder="email" />
-            <Button>Login</Button>
+            <Form.Item name="name" label="Name">
+              <Input prefix={<UserOutlined />} />
+            </Form.Item>
+            <Form.Item name="email" label="E mail">
+              <Input prefix={<MailOutlined />} />
+            </Form.Item>
+            <Button type="primary" block>
+              Login
+            </Button>
           </Form>
         </Card>
       </div>

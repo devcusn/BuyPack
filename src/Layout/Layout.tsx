@@ -4,10 +4,13 @@ import styles from './Layout.module.scss'
 import { LayoutProps } from './types'
 import Header from './components/Header/Header'
 
-const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
+const Layout: React.FunctionComponent<LayoutProps> = ({
+  children,
+  isHeader = true
+}) => {
   return (
     <div className={styles.layout}>
-      <Header />
+      {isHeader && <Header />}
       {children}
     </div>
   )

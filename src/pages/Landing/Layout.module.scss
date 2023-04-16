@@ -1,0 +1,32 @@
+.brand {
+  height: 100vh;
+  background-color: rgb(43, 43, 250);
+}
+
+.landingSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 20px;
+}
+.landingSection_brand {
+  padding: 0px 100px;
+  width: 50%;
+}
+.landingSection_brand > h3 {
+  color: #ffffff;
+}
+.landingSection_image {
+  width: 50%;
+}
+.landingSection_image img {
+  border-radius: 20px;
+}
+.getStartedButton {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  font-size: 30px;
+}
