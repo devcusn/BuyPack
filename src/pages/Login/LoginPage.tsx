@@ -1,12 +1,11 @@
 import React from 'react'
-import { Button, Form, Input, Typography } from 'antd'
+import { Button, Card, Form, Input, Typography } from 'antd'
 import { MailOutlined, UserOutlined } from '@ant-design/icons'
 
 import Layout from 'Layout/Layout'
 import { auth } from 'services/mock-api/auth/endpoints'
 import { useNavigate } from 'react-router-dom'
 import useNotify from 'app/hooks/Notify'
-import Card from 'components/Card/Card'
 
 const { Title } = Typography
 

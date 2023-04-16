@@ -11,7 +11,7 @@ const Layout: React.FunctionComponent<LayoutProps> = ({
   return (
     <div className={styles.layout}>
       {isHeader && <Header />}
-      {children}
+      <div className={styles.layout_content}>{children}</div>
     </div>
   )
 }
