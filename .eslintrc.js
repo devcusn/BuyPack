@@ -15,7 +15,6 @@ module.exports = {
   rules: {
     '@typescript-eslint/dot-notation': ['off'],
     '@typescript-eslint/parser': ['off'],
-    '@typescript-eslint/no-throw-literal': ['off'],
     '@typescript-eslint/await-thenable': ['off'],
     '@typescript-eslint/consistent-type-exports': ['off'],
     '@typescript-eslint/no-base-to-string': ['off'],
@@ -23,6 +22,7 @@ module.exports = {
     '@typescript-eslint/consistent-type-definitions': ['off'],
     '@typescript-eslint/array-type': ['off'],
     '@typescript-eslint/consistent-type-imports': ['off'],
-    '@typescript-eslint/strict-boolean-expressions': ['off']
+    '@typescript-eslint/strict-boolean-expressions': ['off'],
+    '@typescript-eslint/no-confusing-void-expression': ['off']
   }
 }
