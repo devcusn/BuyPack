@@ -1,2 +1,3 @@
 # BuyPack
-React - Typescript - Redux - Redux Saga - scss -  Ant Design -
+
+React - Typescript - Redux - Redux Saga - scss - Ant Design
