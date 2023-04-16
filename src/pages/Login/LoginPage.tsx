@@ -5,15 +5,19 @@ import { MailOutlined, UserOutlined } from '@ant-design/icons'
 import Layout from 'Layout/Layout'
 import { auth } from 'services/mock-api/auth/endpoints'
 import { useNavigate } from 'react-router-dom'
+import useNotify from 'app/hooks/Notify'
 
 const { Title } = Typography
 
 const LoginPage: React.FunctionComponent = () => {
   const [form] = Form.useForm()
   const navigate = useNavigate()
+  const { notify } = useNotify()
+
   const loginHandler = async (values: { FullName: string; email: string }) => {
     const response = await auth({ data: values })
     if (response) {
+      notify({ message: 'Successfully Login' })
       navigate('/products')
     }
   }
@@ -41,10 +45,24 @@ const LoginPage: React.FunctionComponent = () => {
             layout="vertical"
             onFinish={loginHandler}
           >
-            <Form.Item name="FullName" label="Name">
+            <Form.Item
+              name="FullName"
+              label="Full Name"
+              rules={[{ required: true, message: 'Full Name is required' }]}
+            >
               <Input prefix={<UserOutlined />} />
             </Form.Item>
-            <Form.Item name="email" label="E mail">
+            <Form.Item
+              name="email"
+              label="E mail"
+              rules={[
+                { required: true, message: 'Email is required' },
+                {
+                  type: 'email',
+                  message: 'Please enter a valid email address'
+                }
+              ]}
+            >
               <Input prefix={<MailOutlined />} />
             </Form.Item>
             <Button type="primary" block htmlType="submit">
