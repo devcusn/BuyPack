@@ -18,11 +18,15 @@ const LoginPage: React.FunctionComponent = () => {
   const { notify } = useNotify()
 
   const loginHandler = async (values: { FullName: string; email: string }) => {
-    const response = await auth({ data: values })
-    if (response) {
-      notify({ message: 'Successfully Login' })
-      navigate('/products')
-      dispatch(setUserName(values.FullName))
+    try {
+      const response = await auth({ data: values })
+      if (response) {
+        notify({ message: 'Successfully Login' })
+        navigate('/products')
+        dispatch(setUserName(values.FullName))
+      }
+    } catch (err) {
+      notify({ type: 'error', message: 'Bad Request' })
     }
   }
 
