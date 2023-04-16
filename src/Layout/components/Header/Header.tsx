@@ -17,7 +17,7 @@ const Header: React.FunctionComponent = () => {
       <div style={{ width: '100%' }}></div>
       <div className={styles.menu}>
         <UserOutlined />
-        hello{' '}
+        hello
       </div>
     </div>
   )
