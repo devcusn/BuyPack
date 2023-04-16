@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react'
 
 const LandingPage: React.FunctionComponent = () => {
-  return <div>React Boilerplate</div>;
-};
+  return <div>React Boilerplate</div>
+}
 
-export default LandingPage;
+export default LandingPage

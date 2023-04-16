@@ -1,12 +1,12 @@
-import LandingPage from "../../pages/Landing";
-import { RouteType } from "./types";
+import LandingPage from '../../pages/Landing'
+import { RouteType } from './types'
 
 const Routers: Array<RouteType> = [
   {
-    path: "/",
+    path: '/',
     Page: LandingPage,
-    auth: false,
-  },
-];
+    auth: false
+  }
+]
 
-export default Routers;
+export default Routers

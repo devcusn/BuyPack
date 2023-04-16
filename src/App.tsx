@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react'
 
-function App() {
-  return <div>React Boilerplate</div>;
+const App: React.FunctionComponent = () => {
+  return <div>React Boilerplate</div>
 }
 
-export default App;
+export default App
