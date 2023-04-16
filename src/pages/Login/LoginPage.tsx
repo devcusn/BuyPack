@@ -2,7 +2,7 @@ import React from 'react'
 import { Button, Card, Form, Input, Typography } from 'antd'
 import { MailOutlined, UserOutlined } from '@ant-design/icons'
 
-import Layout from 'Layout/Layout'
+import Layout from 'layout/Layout'
 import { auth } from 'services/mock-api/auth/endpoints'
 import { useNavigate } from 'react-router-dom'
 import useNotify from 'app/hooks/Notify'

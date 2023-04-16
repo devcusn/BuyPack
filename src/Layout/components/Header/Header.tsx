@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+import Logo from 'app/assets/logo/logo.svg'
+
 import styles from './Header.module.scss'
 import { UserOutlined } from '@ant-design/icons'
 
@@ -9,8 +11,7 @@ const Header: React.FunctionComponent = () => {
     <div className={styles.header}>
       <div className={styles.logo}>
         <Link className={styles.logo} to="/">
-          <span>PARAM</span>
-          <span>Tech</span>
+          <img src={Logo} />
         </Link>
       </div>
       <div style={{ width: '100%' }}></div>

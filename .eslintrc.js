@@ -29,6 +29,8 @@ module.exports = {
     '@typescript-eslint/space-before-function-paren': ['off'],
     '@typescript-eslint/explicit-function-return-type': ['off'],
     '@typescript-eslint/member-delimiter-style': ['off'],
-    '@typescript-eslint/no-misused-promises': ['off']
+    '@typescript-eslint/no-misused-promises': ['off'],
+    '@typescript-eslint/no-floating-promises': ['off'],
+    '@typescript-eslint/prefer-optional-chain': ['off']
   }
 }

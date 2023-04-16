@@ -2,7 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Button, Typography } from 'antd'
 
-import Layout from 'Layout/Layout'
+import Layout from 'layout/Layout'
 import EshopImg from 'app/assets/images/illustration.jpg'
 
 import styles from './Layout.module.scss'
